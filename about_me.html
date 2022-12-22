@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Me</title>
+    <link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<header>
+		<nav>
+			<ul class="nav__links">
+				<li><a href="index.html">Home Page</a></li>
+				<li><a href="about_me.html">About Me</a></li>
+				<li><a href="my_interests.html">Areas of Interest</a></li>
+				<li><a href="CV.html">CV</a></li>
+			</ul>
+		</nav>
+		<a class="cta" href="contact.html">Contact Me!</a>
+		<p class="menu cta">Menu</p>
+	</header>
+    <div class="cursor"></div>
+	<script>
+	const cursor = document.querySelector('.cursor');
+
+	document.addEventListener('mousemove', e => {
+		cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+	})
+
+	document.addEventListener('click', () => {
+		cursor.classList.add("expand");
+
+		setTimeout(() => {
+			cursor.classList.remove("expand");
+		}, 500)
+	})
+	</script>
+	<div class="overlay">
+		<a class="close">&times;</a>
+		<div class="overlay__content">
+			<a href="index.html">Home Page</a>
+			<a href="about_me.html">About Me</a>
+			<a href="my_interests.html">Areas of Interest</a>
+			<a href="CV.html">CV</a>
+		</div>
+	</div>
+	<style>
+		.MyPic {
+			border-radius: 50%;
+			display: block;
+			position: relative;
+			top: 250px;	
+		}
+		/**
+		.Welcome{
+		padding:3em;
+		position: relative;
+		top: -70%;
+		left: 80px;
+		}
+		**/
+		
+		.line{
+			height: 2px;
+			width: 50%;
+			color: red;
+			position: relative;
+			top: -30%;
+			left: 450px;
+		}
+		
+		/**
+		.para{
+		padding:3em;
+		position: relative;
+		top: -110%;
+		left: 80px;
+		}
+		**/
+	</style>
+	<img src="images/ME.png" width="300" class="MyPic">
+
+
+	<p style="font-size: 100px; position: relative; top: -30%; left: 80px;" class="Welcome">About Me</p>
+	<hr class="line">
+	
+	<pre style="font-size: 20; text-align: center; position: relative; top: -30%; left: 250px;"><p style="text-align: left"> 
+	    My name is Mahiul Bhuiyan and I am a current undergraduate student at Fordham University. 
+            I am studying Computer Science with a double minor in Arabic and Cybersecurity. 
+            The field of Computer Science that I am interested in pursuing is Cybersecurity because I believe that people in that 
+            field are needed more now than ever as cyber threats are on the rise. I wish to do my masters in Cybersecurity. 
+            I also like to learn languages, so far I am proficient in two but I am currently learning my third which is Arabic. 
+            I am a huge basketball fan (go Knicks!) and have been playing basketball since elementary school. I attended 
+            Bard High School Early College in New York City and hold my high school diploma from there. I am also a graduate 
+            of Bard College where I hold my Associate of Arts degree in Liberal Arts! 
+
+	</p>
+	</pre>
+
+</body>
+</html>

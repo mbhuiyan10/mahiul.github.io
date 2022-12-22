@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Areas of Interest</title>
+    <link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<header>
+		<nav>
+			<ul class="nav__links">
+				<li><a href="index.html">Home Page</a></li>
+				<li><a href="about_me.html">About Me</a></li>
+				<li><a href="my_interests.html">Areas of Interest</a></li>
+				<li><a href="CV.html">CV</a></li>
+			</ul>
+		</nav>
+		<a class="cta" href="contact.html">Contact Me!</a>
+		<p class="menu cta">Menu</p>
+	</header>
+    <div class="cursor"></div>
+	<script>
+	const cursor = document.querySelector('.cursor');
+
+	document.addEventListener('mousemove', e => {
+		cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+	})
+
+	document.addEventListener('click', () => {
+		cursor.classList.add("expand");
+
+		setTimeout(() => {
+			cursor.classList.remove("expand");
+		}, 500)
+	})
+	</script>
+	<div class="overlay">
+		<a class="close">&times;</a>
+		<div class="overlay__content">
+			<a href="index.html">Home Page</a>
+			<a href="about_me.html">About Me</a>
+			<a href="my_interests.html">Areas of Interest</a>
+			<a href="CV.html">CV</a>
+		</div>
+	</div>
+	<style>
+		.MyPic {
+			border-radius: 50%;
+			display: block;
+			position: relative;
+			top: 250px;	
+		}
+		/**
+		.Welcome{
+		padding:3em;
+		position: relative;
+		top: -70%;
+		left: 80px;
+		}
+		**/
+		
+		.line{
+			height: 2px;
+			width: 50%;
+			color: red;
+			position: relative;
+			top: -30%;
+			left: 450px;
+		}
+		
+		/**
+		.para{
+		padding:3em;
+		position: relative;
+		top: -110%;
+		left: 80px;
+		}
+		**/
+	</style>
+	<img src="images/bulb.webp" width="300" class="MyPic">
+
+
+	<p style="font-size: 100px; position: relative; top: -30%; left: 80px;" class="Welcome">My Interests</p>
+	<hr class="line">
+	
+	<pre style="font-size: 20; text-align: center; position: relative; top: -30%; left: 250px;"><p style="text-align: left"> 
+	    A interests are diverse as they are deep. I am an avid researcher of cybersecurity and I find that to be highly 
+            interesting. Security Analysts are more in need then ever due to the rising presence of cyber threats from 
+            individuals and organizations. This is why I decided to do my Bachelor's degree in Computer Science and
+            hopefully move on to do my masters in Cybersecurity.
+        
+            I also love learning in languages. Currently I am proficient in Bengali and English and I am currently learning Arabic. 
+            I plan to learn more languages as well such as Hindi, Farsi, Spanish, and others. 
+            I also like to travel a lot and have currently been to 10 countries. 
+
+            I'm also interested in learning about the law. I feel like more people should learn about 
+            law because its the very thing that governs our lives.
+	</p>
+	</pre>
+
+</body>
+</html>

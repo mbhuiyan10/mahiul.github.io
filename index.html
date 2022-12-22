@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<header>
+		<nav>
+			<ul class="nav__links">
+				<li><a href="index.html">Home Page</a></li>
+				<li><a href="about_me.html">About Me</a></li>
+				<li><a href="my_interests.html">Areas of Interest</a></li>
+				<li><a href="CV.html">CV</a></li>
+			</ul>
+		</nav>
+		<a class="cta" href="contact.html">Contact Me!</a>
+		<p class="menu cta">Menu</p>
+	</header>
+    <div class="cursor"></div>
+	<script>
+	const cursor = document.querySelector('.cursor');
+
+	document.addEventListener('mousemove', e => {
+		cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+	})
+
+	document.addEventListener('click', () => {
+		cursor.classList.add("expand");
+
+		setTimeout(() => {
+			cursor.classList.remove("expand");
+		}, 500)
+	})
+	</script>
+	<div class="overlay">
+		<a class="close">&times;</a>
+		<div class="overlay__content">
+			<a href="index.html">Home Page</a>
+			<a href="about_me.html">About Me</a>
+			<a href="my_interests.html">Areas of Interest</a>
+			<a href="CV.html">CV</a>
+		</div>
+	</div>
+	<style>
+		.MyPic {
+			border-radius: 50%;
+			display: block;
+			position: relative;
+			top: 250px;	
+		}
+		/**
+		.Welcome{
+		padding:3em;
+		position: relative;
+		top: -70%;
+		left: 80px;
+		}
+		**/
+		
+		.line{
+			height: 2px;
+			width: 50%;
+			color: red;
+			position: relative;
+			top: -30%;
+			left: 450px;
+		}
+		
+		/**
+		.para{
+		padding:3em;
+		position: relative;
+		top: -110%;
+		left: 80px;
+		}
+		**/
+	</style>
+	<img src="images/hand_waving.webp" width="300" class="MyPic">
+
+
+	<p style="font-size: 100px; position: relative; top: -30%; left: 80px;" class="Welcome">Welcome!</p>
+	<hr class="line">
+	
+	<pre style="font-size: 20; text-align: center; position: relative; top: -30%; left: 250px;"><p style="text-align: left"> 
+		Welcome to my website! This is the home page of my website. Up top, you will find the navigation where you can 
+		navigate to five pages: the home page (here), About Me, Areas of Interest, my CV, and the contact page. 
+		This website is a personal website about myself,my academic journey, and my professional journey. 
+		I hope you enjoy your visit!
+	</p>
+	</pre>
+
+</body>
+</html>
